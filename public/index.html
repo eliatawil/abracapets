@@ -11,7 +11,7 @@
   <div class="container">
     <img class="logo" src="img/logo.png" alt="logo projeto abraça pets"/>
     <h1>Formulário de adoção de animais</h1>
-    <form action="processa_formulario.php" method="POST">
+    <form id="form-adocao" method="POST">
       <label for="nome">Nome:<span class="obrigatorio"> *</span></label>
       <input type="text" id="nome" name="nome" required />
 
@@ -61,7 +61,37 @@
         <button type="submit">Enviar</button>
         <button type="reset">Limpar</button>
       </div>
+      <div id="mensagem-envio" style="margin-top: 20px; color: green;"></div>
     </form>
   </div>
+  <script>
+    document.getElementById('form-adocao').addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio normal
+
+        const form = e.target;
+        const formData = new FormData(form);
+        const mensagemEnvio = document.getElementById('mensagem-envio');
+
+        fetch('processa_formulario.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(resposta => {
+            if (resposta.includes('sucesso')) {
+                mensagemEnvio.textContent = 'Mensagem enviada com sucesso!';
+                mensagemEnvio.style.color = 'green';
+                form.reset();
+            } else {
+                mensagemEnvio.textContent = 'Erro ao enviar. Tente novamente.';
+                mensagemEnvio.style.color = 'red';
+            }
+        })
+        .catch(error => {
+            mensagemEnvio.textContent = 'Erro ao enviar. Tente novamente.';
+            mensagemEnvio.style.color = 'red';
+        });
+    });
+    </script>
 </body>
 </html>
