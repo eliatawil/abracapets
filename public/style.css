@@ -63,6 +63,10 @@ textarea:focus {
   box-shadow: 0 0 5px rgba(44, 62, 80, 0.4);
 }
 
+span.obrigatorio{
+  color: crimson;
+}
+
 button {
   background-color: #7b0ba9;
   color: white;
