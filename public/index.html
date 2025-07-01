@@ -12,6 +12,7 @@
   <div class="container">
     <img class="logo" src="img/logo.png" alt="logo projeto abraça pets"/>
     <h1>Formulário de adoção de animais</h1>
+    <p class="campoObrigatório">Campos com (*) são obrigatórios</p>
     <form id="form-adocao" method="POST">
       <label for="nome">Nome:<span class="obrigatorio"> *</span></label>
       <input type="text" id="nome" name="nome" required />
@@ -61,11 +62,15 @@
       <label>13. O que te motivou a adotar este animal?<span class="obrigatorio"> *</span></label>
       <textarea name="motivacao" required></textarea>
 
+      <div class="confirmacao">
+        <input type="checkbox" id="confirmacao" name="confirmacao" required>
+        <label for="confirmacao">Confirmo que as informações fornecidas acima são verdadeiras.</label>
+      </div>
+      
       <div class="botoes">
         <button type="submit">Enviar</button>
         <button type="reset">Limpar</button>
       </div>
-      <div id="mensagem-envio" style="margin-top: 20px; color: green;"></div>
     </form>
   </div>
   <script src="script.js"></script>
