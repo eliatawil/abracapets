@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário de Adoção</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário de Adoção de Cão</h1>
+    <form action="processa_formulario.php" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label>1. Você mora em casa ou apartamento?</label>
+      <input type="text" name="residencia" required />
+
+      <label>2. Qual sua idade?</label>
+      <input type="text" name="idade" required />
+
+      <label>3. Mora com quem? Em qual endereço?</label>
+      <textarea name="moradia" required></textarea>
+
+      <label>4. Tem crianças? Se sim qual idade?</label>
+      <textarea name="criancas"></textarea>
+
+      <label>5. Já possuem animais? Quantos? São vacinados e castrados?</label>
+      <textarea name="animais"></textarea>
+
+      <label>6. Como é a rotina do seu lar? Fica gente durante o dia? Em qual período?</label>
+      <textarea name="rotina"></textarea>
+
+      <label>7. Perdeu recentemente algum animalzinho? Se sim, qual foi a causa?</label>
+      <textarea name="perda_animal"></textarea>
+
+      <label>8. Você teria condições de arcar com custos clínicos emergenciais?</label>
+      <textarea name="custos"></textarea>
+
+      <label>9. Como lida se o animal fizer bagunça ou destruir algo?</label>
+      <textarea name="comportamento"></textarea>
+
+      <label>10. Se o animal morder uma criança, o que pretende fazer?</label>
+      <textarea name="mordida"></textarea>
+
+      <label>11. Se mudar para lugar onde não pode ter animais, o que fará?</label>
+      <textarea name="mudanca"></textarea>
+
+      <label>12. O que te motivou a adotar este animal?</label>
+      <textarea name="motivacao"></textarea>
+
+      <div class="botoes">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
