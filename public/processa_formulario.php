@@ -27,6 +27,7 @@ $mail->Subject = 'Formulário de Adoção de Animais';
 $labels = [
     'nome' => 'Nome',
     'email' => 'E-mail',
+    'telefone'=> 'Telefone',
     'residencia' => 'Residência',
     'idade' => 'Idade',
     'mora' => 'Mora com quem',
