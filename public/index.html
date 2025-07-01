@@ -6,6 +6,7 @@
   <title>Formulário de Adoção de Animais</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
   <div class="container">
@@ -66,11 +67,10 @@
   </div>
   <script>
     document.getElementById('form-adocao').addEventListener('submit', function(e) {
-        e.preventDefault(); // Impede o envio normal
+        e.preventDefault();
 
         const form = e.target;
         const formData = new FormData(form);
-        const mensagemEnvio = document.getElementById('mensagem-envio');
 
         fetch('processa_formulario.php', {
             method: 'POST',
@@ -79,19 +79,31 @@
         .then(response => response.text())
         .then(resposta => {
             if (resposta.includes('sucesso')) {
-                mensagemEnvio.textContent = 'Mensagem enviada com sucesso!';
-                mensagemEnvio.style.color = 'green';
+                Swal.fire({
+                    title: 'Tudo certo!',
+                    text: 'Sua mensagem foi enviada com sucesso.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
                 form.reset();
             } else {
-                mensagemEnvio.textContent = 'Erro ao enviar. Tente novamente.';
-                mensagemEnvio.style.color = 'red';
+                Swal.fire({
+                    title: 'Erro!',
+                    text: 'Ocorreu um erro ao enviar o formulário. Tente novamente.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
             }
         })
         .catch(error => {
-            mensagemEnvio.textContent = 'Erro ao enviar. Tente novamente.';
-            mensagemEnvio.style.color = 'red';
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Não foi possível enviar o formulário.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
         });
     });
-    </script>
+  </script>
 </body>
 </html>
