@@ -21,7 +21,7 @@ try {
     $mail->addAddress('elia20109029@gmail.com');
 
     $mail->isHTML(true);
-    $mail->Subject = 'Formulário de Adoção de Cão';
+    $mail->Subject = 'Formulário de Adoção de Animais';
 
     $mensagem = '';
     foreach ($_POST as $key => $value) {
