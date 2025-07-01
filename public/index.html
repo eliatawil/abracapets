@@ -12,49 +12,49 @@
     <img class="logo" src="img/logo.png" alt="logo projeto abraça pets"/>
     <h1>Formulário de adoção de animais</h1>
     <form action="processa_formulario.php" method="POST">
-      <label for="nome">Nome:</label>
+      <label for="nome">Nome:<span class="obrigatorio"> *</span></label>
       <input type="text" id="nome" name="nome" required />
 
-      <label for="email">E-mail:</label>
+      <label for="email">E-mail:<span class="obrigatorio"> *</span></label>
       <input type="email" id="email" name="email" required />
 
-      <label>1. Você mora em casa ou apartamento?</label>
+      <label>1. Você mora em casa ou apartamento?<span class="obrigatorio"> *</span></label>
       <input type="text" name="residencia" required />
 
-      <label>2. Qual sua idade?</label>
+      <label>2. Qual sua idade?<span class="obrigatorio"> *</span></label>
       <input type="number" name="idade" required />
 
-      <label>3. Mora com quem?</label>
+      <label>3. Mora com quem?<span class="obrigatorio"> *</span></label>
+      <textarea name="mora" required></textarea>
+
+      <label>4. Qual seu endereço completo (Rua, nº, bairro, cidade, estado)?<span class="obrigatorio"> *</span></label>
       <textarea name="moradia" required></textarea>
 
-      <label>4. Qual seu endereço completo (Rua, nº, bairro, cidade, estado)?</label>
-      <textarea name="moradia" required></textarea>
-
-      <label>5. Tem crianças? Se sim qual idade?</label>
+      <label>5. Tem crianças? Se sim qual idade?<span class="obrigatorio"> *</span></label>
       <textarea name="criancas" required></textarea>
 
-      <label>6. Já possuem animais? Quantos? São vacinados e castrados?</label>
+      <label>6. Já possuem animais? Quantos? São vacinados e castrados?<span class="obrigatorio"> *</span></label>
       <textarea name="animais" required></textarea>
 
-      <label>7. Como é a rotina do seu lar? Fica gente durante o dia? Em qual período?</label>
+      <label>7. Como é a rotina do seu lar? Fica gente durante o dia? Em qual período?<span class="obrigatorio"> *</span></label>
       <textarea name="rotina" required></textarea>
 
-      <label>8. Perdeu recentemente algum animalzinho? Se sim, qual foi a causa?</label>
+      <label>8. Perdeu recentemente algum animalzinho? Se sim, qual foi a causa?<span class="obrigatorio"> *</span></label>
       <textarea name="perda_animal" required></textarea>
 
-      <label>9. Você teria condições de arcar com custos clínicos emergenciais?</label>
+      <label>9. Você teria condições de arcar com custos clínicos emergenciais?<span class="obrigatorio"> *</span></label>
       <textarea name="custos" required></textarea>
 
-      <label>10. Como lida se o animal fizer bagunça ou destruir algo?</label>
+      <label>10. Como lida se o animal fizer bagunça ou destruir algo?<span class="obrigatorio"> *</span></label>
       <textarea name="comportamento" required></textarea>
 
-      <label>11. Se o animal morder uma criança, o que pretende fazer?</label>
+      <label>11. Se o animal morder uma criança, o que pretende fazer?<span class="obrigatorio"> *</span></label>
       <textarea name="mordida" required></textarea>
 
-      <label>12. Se mudar para lugar onde não pode ter animais, o que fará?</label>
+      <label>12. Se mudar para lugar onde não pode ter animais, o que fará?<span class="obrigatorio"> *</span></label>
       <textarea name="mudanca" required></textarea>
 
-      <label>13. O que te motivou a adotar este animal?</label>
+      <label>13. O que te motivou a adotar este animal?<span class="obrigatorio"> *</span></label>
       <textarea name="motivacao" required></textarea>
 
       <div class="botoes">
