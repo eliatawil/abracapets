@@ -7,6 +7,7 @@ require __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
 
 try {
     $mail->isSMTP();
