@@ -1,3 +1,19 @@
+const selectMordida = document.getElementById("mordida");
+const textareaOutro = document.getElementById("mordida_outro");
+
+  textareaOutro.style.display = "none";
+
+  selectMordida.addEventListener("change", function () {
+    if (this.value === "Outra") {
+      textareaOutro.style.display = "block";
+      textareaOutro.required = true;
+    } else {
+      textareaOutro.style.display = "none";
+      textareaOutro.required = false;
+      textareaOutro.value = "";
+    }
+  });
+
 document.getElementById('form-adocao').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -36,20 +52,3 @@ document.getElementById('form-adocao').addEventListener('submit', function(e) {
         });
     });
 });
-
-const selectMordida = document.getElementById("mordida");
-const textareaOutro = document.getElementById("mordida_outro");
-
-  // Oculta o campo inicialmente
-  textareaOutro.style.display = "none";
-
-  selectMordida.addEventListener("change", function () {
-    if (this.value === "Outra") {
-      textareaOutro.style.display = "block";
-      textareaOutro.required = true;
-    } else {
-      textareaOutro.style.display = "none";
-      textareaOutro.required = false;
-      textareaOutro.value = "";
-    }
-    });
