@@ -67,8 +67,16 @@
       <textarea name="mordida_outro" id="mordida_outro" placeholder="Se escolheu 'Outra', descreva aqui..."></textarea>
 
 
-      <label>12. Se mudar para lugar onde não pode ter animais, o que fará?<span class="obrigatorio"> *</span></label>
-      <textarea name="mudanca" required></textarea>
+      <label for="mudanca">12. Se mudar para lugar onde não pode ter animais, o que fará?<span class="obrigatorio"> *</span></label>
+      <select name="mudanca" id="mudanca" required>
+        <option value="">Selecione uma opção</option>
+        <option value="Procurar um lugar que aceite animais">Procurar um lugar que aceite animais</option>
+        <option value="Levar comigo, independentemente do lugar">Levar comigo, independentemente do lugar</option>
+        <option value="Conversar com o novo local para permitir">Conversar com o novo local para permitir</option>
+        <option value="Outra">Outra</option>
+      </select>
+      <textarea name="mudanca_outro" id="mudanca_outro" placeholder="Especifique sua resposta" style="display: none;"></textarea>
+
 
       <label>13. O que te motivou a adotar este animal?<span class="obrigatorio"> *</span></label>
       <textarea name="motivacao" required></textarea>

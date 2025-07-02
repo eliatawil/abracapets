@@ -22,6 +22,21 @@ const telefoneInput = document.getElementById("telefone");
     telefoneInput.value = formatado;
   });
 
+// Questão 12
+const selectMudanca = document.getElementById("mudanca");
+const textareaOutroMudanca = document.getElementById("mudanca_outro");
+
+  selectMudanca.addEventListener("change", function () {
+    if (this.value === "Outra") {
+      textareaOutroMudanca.style.display = "block";
+      textareaOutroMudanca.required = true;
+    } else {
+      textareaOutroMudanca.style.display = "none";
+      textareaOutroMudanca.required = false;
+      textareaOutroMudanca.value = "";
+    }
+  });
+
 const selectMordida = document.getElementById("mordida");
 const textareaOutro = document.getElementById("mordida_outro");
 
