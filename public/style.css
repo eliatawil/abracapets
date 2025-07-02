@@ -15,6 +15,7 @@ div.descricao {
   font-size: 14px;
   margin-bottom: 20px;
   margin: auto;
+  max-width: 700px;
 }
 
 form {
