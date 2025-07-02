@@ -1,3 +1,27 @@
+const telefoneInput = document.getElementById("telefone");
+
+  telefoneInput.addEventListener("input", function () {
+    let valor = telefoneInput.value.replace(/\D/g, "");
+
+    if (valor.length > 11) {
+      valor = valor.slice(0, 11);
+    }
+
+    let formatado = valor;
+
+    if (valor.length > 0) {
+      formatado = "(" + valor.slice(0, 2);
+    }
+    if (valor.length >= 3) {
+      formatado += ") " + valor.slice(2, 7);
+    }
+    if (valor.length >= 8) {
+      formatado += "-" + valor.slice(7);
+    }
+
+    telefoneInput.value = formatado;
+  });
+
 const selectMordida = document.getElementById("mordida");
 const textareaOutro = document.getElementById("mordida_outro");
 
