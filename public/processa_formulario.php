@@ -30,7 +30,7 @@ $labels = [
     'telefone'=> 'Telefone',
     'residencia' => 'Residência',
     'idade' => 'Idade',
-    'mora' => 'Mora com quem',
+    'mora_com' => 'Mora com quem',
     'moradia' => 'Endereço completo',
     'criancas' => 'Crianças (idade)',
     'animais' => 'Possui animais? São vacinados/castrados?',
@@ -39,8 +39,11 @@ $labels = [
     'custos' => 'Condições para arcar com custos emergenciais?',
     'comportamento' => 'Como lida com bagunça?',
     'mordida' => 'Se o animal morder uma criança?',
+    'mordida_outro'=> 'Outra situação de mordida',
     'mudanca' => 'Se mudar para local onde não pode ter animais?',
-    'motivacao' => 'Motivação para adoção'
+    'mudanca_outro'=> 'Outra situação de mudança',
+    'motivacao' => 'Motivação para adoção',
+    'confirmacao' => 'Confirmou que as informações são verdadeiras?'
 ];
 
 $mensagem = '<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">';
