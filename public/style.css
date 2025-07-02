@@ -9,6 +9,14 @@ body, label, input, button, textarea, select {
   font-family: "Open Sans", sans-serif;
 }
 
+div.descricao {
+  text-align: left;
+  color: #7b0ba9;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
 form {
   background-color: white;
   max-width: 700px;
