@@ -80,6 +80,7 @@ textarea:focus {
 
 .confirmacao input[type="checkbox"] {
   margin-right: 10px;
+  float: left;
 }
 .confirmacao input[type="checkbox"]:focus {
   outline: none;
