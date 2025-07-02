@@ -82,20 +82,10 @@ textarea:focus {
   margin-right: 10px;
   float: left;
 }
-.confirmacao input[type="checkbox"]:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(44, 62, 80, 0.4);
-}
-.confirmacao input[type="checkbox"]:checked {
-  background-color: #7b0ba9;
-  color: white;
-}
-.confirmacao input[type="checkbox"]:checked + label {
-  color: #7b0ba9;
-}
 
 .confirmacao label {
   margin-left: 8px;
+  color: #2c3e50;
 }
 
 span.obrigatorio{
