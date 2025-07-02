@@ -55,8 +55,17 @@
       <label>10. Como lida se o animal fizer bagunça ou destruir algo?<span class="obrigatorio"> *</span></label>
       <textarea name="comportamento" required></textarea>
 
-      <label>11. Se o animal morder uma criança, o que pretende fazer?<span class="obrigatorio"> *</span></label>
-      <textarea name="mordida" required></textarea>
+      <label for="mordida">11. Se o animal morder uma criança, o que pretende fazer?<span class="obrigatorio"> *</span></label>
+      <select name="mordida" id="mordida" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option value="Levar ao veterinário e avaliar a situação">Levar ao veterinário e avaliar a situação</option>
+        <option value="Conversar com a criança e supervisionar o convívio">Conversar com a criança e supervisionar o convívio</option>
+        <option value="Buscar ajuda de um adestrador ou especialista">Buscar ajuda de um adestrador ou especialista</option>
+        <option value="Matar o animal">Matar o animal</option>
+        <option value="Outra">Outra (descreva abaixo)</option>
+      </select>
+      <textarea name="mordida_outro" id="mordida_outro" placeholder="Se escolheu 'Outra', descreva aqui..."></textarea>
+
 
       <label>12. Se mudar para lugar onde não pode ter animais, o que fará?<span class="obrigatorio"> *</span></label>
       <textarea name="mudanca" required></textarea>
