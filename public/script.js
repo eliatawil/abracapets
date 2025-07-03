@@ -22,6 +22,27 @@ const telefoneInput = document.getElementById("telefone");
     telefoneInput.value = formatado;
   });
 
+const selectAnimais = document.getElementById("animais");
+const campoDataVacina = document.getElementById("campoDataVacina");
+const inputDataVacina = document.getElementById("data_vacina");
+
+// Aplica máscara de data
+const mask = IMask(inputDataVacina, {
+  mask: '00/00/0000'
+});
+
+// Exibe/esconde campo conforme a escolha
+selectAnimais.addEventListener("change", function () {
+  if (this.value === "Sim") {
+    campoDataVacina.style.display = "block";
+    inputDataVacina.required = true;
+  } else {
+    campoDataVacina.style.display = "none";
+    inputDataVacina.required = false;
+    inputDataVacina.value = "";
+  }
+});
+
 // Questão 12
 const selectMudanca = document.getElementById("mudanca");
 const textareaOutroMudanca = document.getElementById("mudanca_outro");
