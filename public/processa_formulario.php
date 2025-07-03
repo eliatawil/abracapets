@@ -19,7 +19,7 @@ try {
     $mail->Port = 465;
 
     $mail->setFrom($_POST['email'], $_POST['nome']);
-    $mail->addAddress('elia20109029@gmail.com');
+    $mail->addAddress('nucleoabracapets@gmail.com');
 
 $mail->isHTML(true);
 $mail->Subject = 'Formulário de Adoção de Animais';
