@@ -46,6 +46,10 @@ $labels = [
     'confirmacao' => 'Confirmou que as informações são verdadeiras?'
 ];
 
+foreach ($_POST as $key => $value) {
+    $mensagem .= "<tr><td><strong>" . ucfirst($key) . ":</strong></td><td>" . nl2br(htmlspecialchars($value)) . "</td></tr>";
+}
+
 $mensagem = '<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">';
 $mensagem .= '<thead><tr style="background-color: #f2f2f2;"><th align="left">Campo</th><th align="left">Resposta</th></tr></thead>';
 $mensagem .= '<tbody>';

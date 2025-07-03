@@ -40,8 +40,17 @@
       <label>5. Tem crianças? Se sim qual idade?<span class="obrigatorio"> *</span></label>
       <textarea name="criancas" required></textarea>
 
-      <label>6. Já possuem animais? Quantos? São vacinados e castrados?<span class="obrigatorio"> *</span></label>
-      <textarea name="animais" required></textarea>
+      <label for="animais">6. Possui animais? São vacinados/castrados?<span class="obrigatorio"> *</span></label>
+      <select id="animais" name="animais" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <div id="campoDataVacina" style="display: none; margin-top: 10px;">
+        <label for="data_vacina">Data da última vacina:<span class="obrigatorio"> *</span></label>
+        <input type="text" id="data_vacina" name="data_vacina" placeholder="dd/mm/aaaa" />
+      </div>
 
       <label>7. Como é a rotina do seu lar? Fica gente durante o dia? Em qual período?<span class="obrigatorio"> *</span></label>
       <textarea name="rotina" required></textarea>
