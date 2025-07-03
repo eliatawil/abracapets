@@ -31,6 +31,9 @@ const inputDetalhes = document.getElementById("detalhes_animais");
 const mask = IMask(inputDataVacina, {
   mask: '00/00/0000'
 });
+const maskTelefone = IMask(telefoneInput, {
+  mask: '(00) 00000-0000'
+});
 
 // Exibir campos extras somente se "Sim"
 selectAnimais.addEventListener("change", function () {
