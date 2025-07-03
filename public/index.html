@@ -38,8 +38,17 @@
       <label>4. Qual seu endereço completo (Rua, nº, bairro, cidade, estado)?<span class="obrigatorio"> *</span></label>
       <textarea name="moradia" placeholder="Rua Fulana de Tal, 000, Bairro Tal, Cidade Tal, Estado tal" required></textarea>
 
-      <label>5. Tem crianças? Se sim qual idade?<span class="obrigatorio"> *</span></label>
-      <textarea name="criancas" required></textarea>
+      <label for="criancas">5. Tem crianças?<span class="obrigatorio"> *</span></label>
+      <select id="criancas" name="criancas" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <div id="criancas_detalhes_container" style="display: none; margin-top: 10px;">
+        <label for="criancas_detalhes">Se sim, qual idade e mais informações?</label>
+        <textarea id="criancas_detalhes" name="criancas_detalhes"></textarea>
+      </div>
 
       <label for="animais">6. Possui animais? São vacinados/castrados?<span class="obrigatorio"> *</span></label>
       <select id="animais" name="animais" required>
