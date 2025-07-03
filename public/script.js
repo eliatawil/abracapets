@@ -37,6 +37,20 @@ IMask(inputTelefone, {
     mask: '(00) 00000-0000'
 });
 
+// Máscara para moeda em reais
+const inputCustos = document.getElementById("custos");
+IMask(inputCustos, {
+  mask: 'R$ num',
+  blocks: {
+    num: {
+      mask: Number,
+      thousandsSeparator: '.',
+      radix: ',',
+      mapToRadix: ['.']
+    }
+  }
+});
+
 // Exibir campos extras somente se "Sim"
 selectAnimais.addEventListener("change", function () {
   if (this.value === "Sim") {
