@@ -37,6 +37,13 @@ const textareaOutroMudanca = document.getElementById("mudanca_outro");
     }
   });
 
+const form = document.querySelector("form");
+  const loading = document.getElementById("loading");
+
+  form.addEventListener("submit", function () {
+    loading.style.display = "flex"; // ou "block"
+  });
+
 const selectMordida = document.getElementById("mordida");
 const textareaOutro = document.getElementById("mordida_outro");
 
