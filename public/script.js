@@ -26,29 +26,10 @@ const selectAnimais = document.getElementById("animais");
 const infoExtras = document.getElementById("infoAnimaisExtras");
 const inputDataVacina = document.getElementById("data_vacina");
 const inputDetalhes = document.getElementById("detalhes_animais");
-const inputTelefone = document.getElementById("telefone");
 
 // Máscara para data
 const mask = IMask(inputDataVacina, {
   mask: '00/00/0000'
-});
-
-IMask(inputTelefone, {
-    mask: '(00) 00000-0000'
-});
-
-// Máscara para moeda em reais
-const inputCustos = document.getElementById("custos");
-IMask(inputCustos, {
-  mask: 'R$ num',
-  blocks: {
-    num: {
-      mask: Number,
-      thousandsSeparator: '.',
-      radix: ',',
-      mapToRadix: ['.']
-    }
-  }
 });
 
 // Exibir campos extras somente se "Sim"
