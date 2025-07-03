@@ -49,6 +49,10 @@ label {
   font-style: normal;
 }
 
+small{
+  color: #2c3e5096;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="email"],
