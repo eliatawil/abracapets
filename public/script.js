@@ -22,6 +22,23 @@ const telefoneInput = document.getElementById("telefone");
     telefoneInput.value = formatado;
   });
 
+const selectCriancas = document.getElementById("criancas");
+const detalhesCriancasContainer = document.getElementById("criancas_detalhes_container");
+const detalhesCriancas = document.getElementById("criancas_detalhes");
+
+detalhesCriancasContainer.style.display = "none";
+
+selectCriancas.addEventListener("change", function () {
+  if (this.value === "Sim") {
+    detalhesCriancasContainer.style.display = "block";
+    detalhesCriancas.required = true;
+  } else {
+    detalhesCriancasContainer.style.display = "none";
+    detalhesCriancas.required = false;
+    detalhesCriancas.value = "";
+  }
+});
+
 const selectAnimais = document.getElementById("animais");
 const infoExtras = document.getElementById("infoAnimaisExtras");
 const inputDataVacina = document.getElementById("data_vacina");
