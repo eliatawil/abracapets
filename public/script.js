@@ -23,23 +23,27 @@ const telefoneInput = document.getElementById("telefone");
   });
 
 const selectAnimais = document.getElementById("animais");
-const campoDataVacina = document.getElementById("campoDataVacina");
+const infoExtras = document.getElementById("infoAnimaisExtras");
 const inputDataVacina = document.getElementById("data_vacina");
+const inputDetalhes = document.getElementById("detalhes_animais");
 
-// Aplica máscara de data
+// Máscara para data
 const mask = IMask(inputDataVacina, {
   mask: '00/00/0000'
 });
 
-// Exibe/esconde campo conforme a escolha
+// Exibir campos extras somente se "Sim"
 selectAnimais.addEventListener("change", function () {
   if (this.value === "Sim") {
-    campoDataVacina.style.display = "block";
+    infoExtras.style.display = "block";
     inputDataVacina.required = true;
+    inputDetalhes.required = true;
   } else {
-    campoDataVacina.style.display = "none";
+    infoExtras.style.display = "none";
     inputDataVacina.required = false;
+    inputDetalhes.required = false;
     inputDataVacina.value = "";
+    inputDetalhes.value = "";
   }
 });
 
