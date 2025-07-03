@@ -35,8 +35,8 @@
       <label>3. Mora com quem?<span class="obrigatorio"> *</span></label>
       <textarea name="mora_com" required></textarea>
 
-      <label>4. Qual seu endereço completo (Rua, nº, bairro, cidade, estado)?<span class="obrigatorio"> *</span></label>
-      <textarea name="moradia" placeholder="Rua Fulana de Tal, 000, Bairro Tal, Cidade Tal, Estado tal" required></textarea>
+      <label>4. Qual o bairro onde mora de que cidade?<span class="obrigatorio"> *</span></label>
+      <textarea name="moradia" placeholder="Bairro Tal, Cidade Tal" required></textarea>
 
       <label for="criancas">5. Tem crianças?<span class="obrigatorio"> *</span></label>
       <select id="criancas" name="criancas" required>
@@ -47,10 +47,10 @@
 
       <div id="criancas_detalhes_container" style="display: none; margin-top: 10px;">
         <label for="criancas_detalhes">Se sim, qual idade e mais informações?</label>
-        <textarea id="criancas_detalhes" name="criancas_detalhes" placeholder="Idade, comportamento..."></textarea>
+        <textarea id="criancas_detalhes" name="criancas_detalhes" placeholder="Idade, comportamento..." required></textarea>
       </div>
 
-      <label for="animais">6. Possui animais? São vacinados/castrados?<span class="obrigatorio"> *</span></label>
+      <label for="animais">6. Possui animais?<span class="obrigatorio"> *</span></label>
       <select id="animais" name="animais" required>
         <option value="">Selecione</option>
         <option value="Sim">Sim</option>
@@ -61,7 +61,7 @@
         <label for="data_vacina">Data da última vacina:</label>
         <input type="text" id="data_vacina" name="data_vacina" placeholder="dd/mm/aaaa" />
 
-        <label for="detalhes_animais" style="margin-top: 10px;">Mais detalhes sobre os animais:<span class="obrigatorio"> *</span></label>
+        <label for="detalhes_animais" style="margin-top: 10px;">São vacinados ou castrados? Conte-nos um pouco mais:<span class="obrigatorio"> *</span></label>
         <textarea id="detalhes_animais" name="detalhes_animais" rows="3" placeholder="Descreva quantidade, castração, tipo de vacina etc." required></textarea>
       </div>
 
