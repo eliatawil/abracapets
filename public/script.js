@@ -26,6 +26,7 @@ const selectAnimais = document.getElementById("animais");
 const infoExtras = document.getElementById("infoAnimaisExtras");
 const inputDataVacina = document.getElementById("data_vacina");
 const inputDetalhes = document.getElementById("detalhes_animais");
+const inputTelefone = document.getElementById("telefone");
 
 // Máscara para data
 const mask = IMask(inputDataVacina, {
