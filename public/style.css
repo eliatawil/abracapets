@@ -51,6 +51,7 @@ label {
 
 small{
   color: #2c3e5096;
+  font-weight: 200;
 }
 
 input[type="text"],
