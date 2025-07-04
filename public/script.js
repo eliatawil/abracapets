@@ -53,7 +53,7 @@ const mask = IMask(inputDataVacina, {
 selectAnimais.addEventListener("change", function () {
   if (this.value === "Sim") {
     infoExtras.style.display = "block";
-    inputDataVacina.required = true;
+    inputDataVacina.required = false;
     inputDetalhes.required = true;
   } else {
     infoExtras.style.display = "none";
